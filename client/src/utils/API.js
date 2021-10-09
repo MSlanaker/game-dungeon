@@ -23,7 +23,7 @@ export const APInewAuth = () => {
 
 
 
-// Get Search Data
+// Game Search Data
 
 const dataURL = "https://api.igdb.com/v4/search";
 // let searchText = `search Call of Duty`;
@@ -50,7 +50,37 @@ axios(searchData)
 
 };
 
+export const APIsearchScreenshot = () =>{
+    const searchData = {
+        url: "https://api.igdb.com/v4/screenshots",
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Client-ID': `${API_CLIENT_ID}`,
+            'Authorization': `Bearer ${API_AUTH}`},
+            data: "fields *; where game = 12018976;"
+        };
+    axios(searchData)
+  .then(response => {
+      console.log(response.data);
+  })
+  .catch(err => {
+      console.error(err);
+  });
 
+
+
+};
+
+
+
+
+
+
+
+
+
+  APIsearchScreenshot();
 
 // APIsearchGame();
 
