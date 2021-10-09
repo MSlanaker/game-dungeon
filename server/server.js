@@ -5,7 +5,8 @@ const mongoose = require("mongoose")
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL, {
+// Confirm databse name
+mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/gamedungeon", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
