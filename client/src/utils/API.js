@@ -1,14 +1,13 @@
 import axios from 'axios';
 
-// Get Bearer Key
-// // https://id.twitch.tv/oauth2/token?client_id=q16fdhms6ouner5f0cs80ophtd7ldl&client_secret=cq2jyfdk4dbftgj5b0ffpejknqeq73&grant_type=client_credentials
-// // process.env.API_CLIENT_ID=q16fdhms6ouner5f0cs80ophtd7ldl
-// // process.env.API_SECRET=cq2jyfdk4dbftgj5b0ffpejknqeq73
+const API_CLIENT_ID="";
+const API_SECRET="";
+const API_AUTH="";
 
-// const { API_CLIENT_ID, API_SECRET } = process.env;
-// const authURL = `https://id.twitch.tv/oauth2/token?client_id=${API_CLIENT_ID}&client_secret=${API_SECRET}&grant_type=client_credentials`;
+const authURL = `https://id.twitch.tv/oauth2/token?client_id=${API_CLIENT_ID}&client_secret=${API_SECRET}&grant_type=client_credentials`;
 
-const authURL = "https://id.twitch.tv/oauth2/token?client_id=q16fdhms6ouner5f0cs80ophtd7ldl&client_secret=cq2jyfdk4dbftgj5b0ffpejknqeq73&grant_type=client_credentials";
+
+
 
 
 
@@ -33,8 +32,8 @@ const searchData = {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
-        'Client-ID': 'q16fdhms6ouner5f0cs80ophtd7ldl',
-        'Authorization': 'Bearer g9plrm93slj1upiyso4t12hnf707hh'},
+        'Client-ID': `${API_CLIENT_ID}`,
+        'Authorization': `Bearer ${API_AUTH}`},
     data: 'fields id, name; search "Zelda"; limit 25;',
 };
 // console.log(authData);
@@ -53,6 +52,6 @@ axios(searchData)
 
 
 
-
+// APIsearchGame();
 
 
