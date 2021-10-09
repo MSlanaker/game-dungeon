@@ -4,14 +4,10 @@ export default function Header() {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitleSm">React & Node</span>
-        <span className="headerTitleLg">BLOG</span>
+        <span className="headerTitleSm">Game Dungeon</span>
+        <span className="headerTitleLg">Discuss your gaming.</span>
       </div>
-      <img
-        className="headerImg"
-        src="https://images.pexels.com/photos/1167355/pexels-photo-1167355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        alt=""
-      />
+      <img className="headerImg" src="https://cdnb.artstation.com/p/assets/images/images/018/622/083/large/josh-benson-beautypass-001.jpg?1560093040" alt="" />
     </div>
   );
 }
