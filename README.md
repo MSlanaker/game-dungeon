@@ -1,145 +1,70 @@
-# <center><img src="https://cdn2.bulbagarden.net/upload/4/4b/Pok%C3%A9dex_logo.png" alt="PokeDex Logo" title="PokeDex">
+# Getting Started with Create React App
 
-# Welcome to Project Three - "Title"
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-<center>
+In the project directory, you can run:
 
-## Introduction
+### `npm start`
 
-</center>
-insert intro for app here
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-<center>
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Team Members
+### `npm test`
 
-</center>
-<center>
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-> [Person 1](link)
+### `npm run build`
 
-> [Person 2](link)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-> [Person 3](link)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-> [CJ Trahey](https://github.com/cjtrahey)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-</center>
-<center>
+### `npm run eject`
 
-## Product
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-</center>
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-* The [Title](https://www.pokemon.com/us/pokedex/) is... (explain what the app does)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-<center>
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Solution
+## Learn More
 
-</center>
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-* (insert a solution here)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-<center>
+### Code Splitting
 
-## Concept
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-</center>
+### Analyzing the Bundle Size
 
-* The user...
-* then they...
-* after that, they...
-<p>
-<br>
-(user story)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-<center>
+### Making a Progressive Web App
 
-## User Story
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-</center>
+### Advanced Configuration
 
- * AS 
-* I WANT TO 
-* SO THAT I 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
 
-<center>
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-## Simplified Mechanics
+### `npm run build` fails to minify
 
-</center>
-
-* This project...
-<p>
-<br>
-The following script... 
-
-```
-//(insert an important snippet of code)
-
-```
-
-```
-
-// (insert an important snippet of code)
-
-```
-
-<center>
-
-## Technologies
-
-</center>
-
-The following technologies were used in the creation of this group project:
-* HTML
-* CSS
-* JavaScript
-* (others)
-
-<center>
-
-## Example
-
-</center>
-    
-<p><br>
-Wireframe proposal:
-<p><br>
-    
-![image info](./assets/images/actual-wireframe.png)
-(screenshot of the wireframe)
-
-<p><br>
-
-Final Project:
-<br>
-
-![image info](./assets/images/app_photo_one_screen.png)
-(screenshot of the app)
-
-
-<center>
-
-## Future Technologies
-
-</center>
-
-In the future, further development on this project would include:
-
-* (insert 3 instances of things that can be improved)
-
-## Documentation
-
-> [Slideshow Presentation](link)
-> (other sources we used)
-<p>
-<br>
-<center>
-(lisense)
-</center>
-        
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
