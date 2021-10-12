@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+ignore_API.js
+/client/node_modules/
+/server/node_modules/
+/server/node_modules/follow-redirects
 # dependencies
 /node_modules
 /.pnp

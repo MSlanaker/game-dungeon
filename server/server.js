@@ -6,6 +6,9 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const blogRoute = require("./routes/blogs");
 
+const routes = require('./routes');
+
+
 dotenv.config();
 app.use(express.json());
 
@@ -18,9 +21,15 @@ mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/gamedungeon", {
 .then(console.log("Now connected to Mongodb"))
 .catch((err) => console.log(err));
 
+
+
+
+
+app.use("/api/games", gameRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/blogs", blogRoute);
+
 
 
 app.listen("5001", () => {
