@@ -6,10 +6,14 @@ const blogsSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  author: {
+  username: {
     type: String,
     trim: true,
-    required: "Author name is required",
+    required: "Username name is required",
+  },
+  blogtitle: {
+    type: String,
+    required: true
   },
   blogtext: {
     type: String,
