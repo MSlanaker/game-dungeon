@@ -5,9 +5,12 @@ const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const blogRoute = require("./routes/blogs");
+const gameRoute = require("./routes/game");
 
-const routes = require('./routes');
-
+// test
+// const path = require('path');
+// const routes = require('./routes');
+// Test
 
 dotenv.config();
 app.use(express.json());
@@ -22,6 +25,11 @@ mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/gamedungeon", {
 .catch((err) => console.log(err));
 
 
+// Test Start
+// app.get('/test', (req, res) => res.sendFile(path.join(__dirname, './test/test.html')));
+// app.use(express.static(path.join(__dirname, 'test')));
+
+// Test End
 
 
 
