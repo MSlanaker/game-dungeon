@@ -1,12 +1,12 @@
-const router = require('express').Router();
-const externalRoute = require('./apiRoutes');
+// const router = require('express').Router();
+// const externalRoute = require('../game');
 
 
-router.use('/', externalRoute);
-
-
-
+// router.use('/', externalRoute);
 
 
 
-module.exports = router;
+
+
+
+// module.exports = router;
