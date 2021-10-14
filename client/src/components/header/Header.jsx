@@ -4,10 +4,14 @@ export default function Header() {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitleSm">Game Dungeon</span>
-        <span className="headerTitleLg">Discuss your gaming.</span>
+        <span className="headerTitleSm">Talk that gamer talk...</span>
+        <span className="headerTitleLg">Game Dungeon</span>
       </div>
-      <img className="headerImg" src="https://cdnb.artstation.com/p/assets/images/images/018/622/083/large/josh-benson-beautypass-001.jpg?1560093040" alt="" />
+      <img
+        className="headerImg"
+        src="https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/6/AmazonStores/ATVPDKIKX0DER/c56e1e493747e1bee78f78206aee8720.w1200.h400.png"
+        alt=""
+      />
     </div>
   );
 }
