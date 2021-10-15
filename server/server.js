@@ -8,7 +8,7 @@ const blogRoute = require("./routes/blogs");
 const gameRoute = require("./routes/game");
 
 // test
-// const path = require('path');
+const path = require('path');
 // const routes = require('./routes');
 // Test
 
@@ -26,8 +26,8 @@ mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/gamedungeon", {
 
 
 // Test Start
-// app.get('/test', (req, res) => res.sendFile(path.join(__dirname, './test/test.html')));
-// app.use(express.static(path.join(__dirname, 'test')));
+app.get('/test', (req, res) => res.sendFile(path.join(__dirname, './test/test.html')));
+app.use(express.static(path.join(__dirname, 'test')));
 
 // Test End
 
