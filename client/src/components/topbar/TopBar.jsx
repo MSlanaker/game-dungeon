@@ -1,8 +1,64 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./topbar.css";
+import {Route} from 'react-router-dom'
 
 export default function Topbar() {
   const user = true;
+  const [gamename, setgamename] = useState("");
+
+  const handleChange = (event) => {
+    const { target } = event;
+
+    setgamename(target.value);
+  };
+
+  const loadGamePage = () => {
+    setgamename("");
+  };
+
+
+
+
+
+
+// Move to game page//
+
+  const findGame = async (event) => {
+    event.preventDefault();
+
+    alert(gamename);
+    setgamename("");
+
+    // Search
+
+    const uri = gamename;
+    const encoded = encodeURI(uri);
+
+    let apiURL = `/api/games/find/${encoded}`;
+
+    const response = await fetch(apiURL, {
+      method: "GET",
+      headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }
+    });
+
+    if (response.ok) {
+      let json = await response.json();
+
+      console.log("Auth");
+      console.log(json);
+      
+    } else {
+      alert("Error");
+    }
+  };
+// Move to game page
+
+
+
   return (
     <div className="top">
       <div className="topLeft">
@@ -52,6 +108,24 @@ export default function Topbar() {
           </ul>
         )}
         <i className="topSearchIcon fas fa-search"></i>
+        {/* Added Find a Game */}
+        {/* <h3>Find a Game:</h3> */}
+        <input
+          type="text"
+          id="textBox"
+          placeholder="Find a Game"
+          value={gamename}
+          onChange={handleChange}
+        />
+
+<Route render={({ history}) => (
+        <button type="button" id="findBtn" onClick={() => { history.push(`/find/${gamename}`); loadGamePage() } }>
+
+          Find a Game
+        </button>
+)} />
+
+
       </div>
     </div>
   );
