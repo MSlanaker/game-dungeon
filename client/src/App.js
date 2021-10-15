@@ -1,4 +1,4 @@
-import Topbar from "./components/topbar/Topbar";
+import Topbar from "./components/topbar/TopBar";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
