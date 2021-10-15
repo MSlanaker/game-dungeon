@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./topbar.css";
+import {Route} from 'react-router-dom'
 
 export default function Topbar() {
   const user = true;
@@ -8,8 +9,20 @@ export default function Topbar() {
 
   const handleChange = (event) => {
     const { target } = event;
+
     setgamename(target.value);
   };
+
+  const loadGamePage = () => {
+    setgamename("");
+  };
+
+
+
+
+
+
+// Move to game page//
 
   const findGame = async (event) => {
     event.preventDefault();
@@ -37,10 +50,14 @@ export default function Topbar() {
 
       console.log("Auth");
       console.log(json);
+      
     } else {
       alert("Error");
     }
   };
+// Move to game page
+
+
 
   return (
     <div className="top">
@@ -100,9 +117,15 @@ export default function Topbar() {
           value={gamename}
           onChange={handleChange}
         />
-        <button type="button" id="findBtn" onClick={findGame}>
+
+<Route render={({ history}) => (
+        <button type="button" id="findBtn" onClick={() => { history.push(`/find/${gamename}`); loadGamePage() } }>
+
           Find a Game
         </button>
+)} />
+
+
       </div>
     </div>
   );
