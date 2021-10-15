@@ -1,5 +1,7 @@
 import Topbar from "./components/topbar/TopBar";
 import Homepage from "./pages/homepage/Homepage";
+import Game from "./pages/game/game";
+import SearchResults from "./pages/searchResults/searchResults";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Settings from "./pages/settings/Settings";
@@ -29,6 +31,12 @@ function App() {
         <Route path="/write">{currentUser ? <Write /> : <Login />}</Route>
         <Route path="/settings">
           {currentUser ? <Settings /> : <Login />}
+        </Route>
+        <Route path="/find/:id">
+          <SearchResults />
+        </Route>
+        <Route path="/game/">
+          <Game />
         </Route>
       </Switch>
     </Router>
