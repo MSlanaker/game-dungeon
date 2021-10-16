@@ -112,7 +112,7 @@ router.get("/cover/:id", async (req, res) => {
     const response = await axios(imageSearchData);
     const [coverRaw] = response.data;
     const cover = {
-      big: `//images.igdb.com/igdb/image/upload/t_screenshot_big/${coverRaw.image_id}.jpg`,
+      big: `//images.igdb.com/igdb/image/upload/t_cover_big/${coverRaw.image_id}.jpg`,
       med: `//images.igdb.com/igdb/image/upload/t_logo_med/${coverRaw.image_id}.jpg`,
     };
 
