@@ -78,8 +78,10 @@ export default function Topbar() {
               HOME
             </Link>
           </li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
+          {/* <li className="topListItem">ABOUT</li> */}
+          {/* we dont need this line */}
+          {/* <li className="topListItem">CONTACT</li> */}
+          {/* or this line, for that matter */}
           <li className="topListItem">
             <Link className="link" to="/write">
               WRITE
