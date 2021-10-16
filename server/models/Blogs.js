@@ -21,8 +21,8 @@ const blogsSchema = new Schema({
     required: "blogtext is required",
   },
   gameID: {
-    type: Number,
-    required: "Game id is required",
+    type: Number
+    // required: "Game id is required",
   },
 });
 

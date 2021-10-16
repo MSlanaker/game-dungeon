@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./topbar.css";
 import {Route} from 'react-router-dom'
+import { Context } from "../../context/Context";
 
 export default function Topbar() {
-  const user = true;
+  const { user, dispatch } = useContext(Context);
+  const handleLogout = () => {
+    dispatch({ type:"LOGOUT" });
+  }
   const [gamename, setgamename] = useState("");
 
   const handleChange = (event) => {
@@ -74,26 +78,28 @@ export default function Topbar() {
               HOME
             </Link>
           </li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
+          {/* <li className="topListItem">ABOUT</li> */}
+          {/* we dont need this line */}
+          {/* <li className="topListItem">CONTACT</li> */}
+          {/* or this line, for that matter */}
           <li className="topListItem">
             <Link className="link" to="/write">
               WRITE
             </Link>
           </li>
-          {user && <li className="topListItem">LOGOUT</li>}
+          <li className="topListItem" onClick={handleLogout}> {user && "LOGOUT"}</li>
         </ul>
       </div>
       <div className="topRight">
-        
+       {user ? (
           <Link className="link" to="/settings">
             <img
               className="topImg"
-              src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src="https://cdn2.iconfinder.com/data/icons/game-streaming-4/60/Gamer-Profile-gaming-avatar-user-person-male-512.png"
               alt=""
             />
           </Link>
-        
+       ) : (
           <ul className="topList">
             <li className="topListItem">
               <Link className="link" to="/login">
@@ -106,7 +112,7 @@ export default function Topbar() {
               </Link>
             </li>
           </ul>
-        
+       )}
         <i className="topSearchIcon fas fa-search"></i>
         {/* Added Find a Game */}
         {/* <h3>Find a Game:</h3> */}
