@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import {Route} from 'react-router-dom'
+import { Route } from "react-router-dom";
 
 import { useParams } from "react-router";
 
 function SearchResults() {
   const [foundGames, setfoundGames] = useState([]);
   const { id } = useParams();
-  const apiURL = `/api/games/find/${id}`;
+  const apiURL = `/games/find/${id}`;
 
   const renderResults = async () => {
     try {
@@ -38,27 +38,28 @@ function SearchResults() {
     <div>
       <h2>
         {foundGames.length
-            ? `Viewing ${foundGames.length} results:`
-            : 'No games found.'}
+          ? `Viewing ${foundGames.length} results:`
+          : "No games found."}
       </h2>
       <ul>
-      {foundGames.map((game) => {
-      return (
-      <div>
-    <Route render={({ history}) => (
-
-              <button onClick={() => { history.push(`/game/${game.game}`) } }>{game.name}</button>
-              )} />
-
-
-
-  
-
-      </div>
-
-      );
-            })}
-                    </ul>
+        {foundGames.map((game) => {
+          return (
+            <div>
+              <Route
+                render={({ history }) => (
+                  <button
+                    onClick={() => {
+                      history.push(`/game/${game.game}`);
+                    }}
+                  >
+                    {game.name}
+                  </button>
+                )}
+              />
+            </div>
+          );
+        })}
+      </ul>
     </div>
   );
 }
