@@ -12,7 +12,7 @@
 
 .headerTitleSm {
   position: absolute;
-  top: 18%;
+  top: 16%;
   font-size: 20px;
 }
 
@@ -20,6 +20,7 @@
   position: absolute;
   top: 20%;
   font-size: 100px;
+  
 }
 
 .headerImg {
