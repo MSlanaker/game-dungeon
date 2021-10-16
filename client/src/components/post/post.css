@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .postCat {
   font-family: "Varela Round", Arial, Helvetica, sans-serif;
   font-weight: 400;
