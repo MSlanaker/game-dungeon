@@ -23,17 +23,13 @@ function App() {
         <Route path="/posts">
           <Homepage />
         </Route>
-        <Route path="/register">
-          {user ? <Homepage /> : <Register />}
-        </Route>
+        <Route path="/register">{user ? <Homepage /> : <Register />}</Route>
         <Route path="/login">{user ? <Homepage /> : <Login />}</Route>
         <Route path="/post/:id">
           <Single />
         </Route>
         <Route path="/write">{user ? <Write /> : <Login />}</Route>
-        <Route path="/settings">
-          {user ? <Settings /> : <Login />}
-        </Route>
+        <Route path="/settings">{user ? <Settings /> : <Login />}</Route>
         <Route path="/find/:id">
           <SearchResults />
         </Route>
