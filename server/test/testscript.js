@@ -8,7 +8,7 @@ let textBox = $("#textBox").val();
 const testData = async (event) => {
   event.preventDefault();
 
-  const response = await fetch(`/api/games/1942`, {
+  const response = await fetch(`/api/games/175961`, {
     method: "GET",
   });
 
