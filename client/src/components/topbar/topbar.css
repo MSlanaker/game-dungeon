@@ -44,8 +44,8 @@
   cursor: pointer;
 }
 
-.topListItem:hover{
-    color: gray;
+.topListItem:hover {
+  color: gray;
 }
 
 .topImg {
