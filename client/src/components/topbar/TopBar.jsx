@@ -24,37 +24,37 @@ export default function Topbar() {
 
 // Move to game page//
 
-  const findGame = async (event) => {
-    event.preventDefault();
+  // const findGame = async (event) => {
+  //   event.preventDefault();
 
-    alert(gamename);
-    setgamename("");
+  //   alert(gamename);
+  //   setgamename("");
 
-    // Search
+  //   // Search
 
-    const uri = gamename;
-    const encoded = encodeURI(uri);
+  //   const uri = gamename;
+  //   const encoded = encodeURI(uri);
 
-    let apiURL = `/api/games/find/${encoded}`;
+  //   let apiURL = `/api/games/find/${encoded}`;
 
-    const response = await fetch(apiURL, {
-      method: "GET",
-      headers : { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }
-    });
+  //   const response = await fetch(apiURL, {
+  //     method: "GET",
+  //     headers : { 
+  //         'Content-Type': 'application/json',
+  //         'Accept': 'application/json'
+  //        }
+  //   });
 
-    if (response.ok) {
-      let json = await response.json();
+  //   if (response.ok) {
+  //     let json = await response.json();
 
-      console.log("Auth");
-      console.log(json);
+  //     console.log("Auth");
+  //     console.log(json);
       
-    } else {
-      alert("Error");
-    }
-  };
+  //   } else {
+  //     alert("Error");
+  //   }
+  // };
 // Move to game page
 
 

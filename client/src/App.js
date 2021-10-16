@@ -37,7 +37,7 @@ function App() {
         <Route path="/find/:id">
           <SearchResults />
         </Route>
-        <Route path="/game/">
+        <Route path="/game/:id">
           <Game />
         </Route>
       </Switch>
