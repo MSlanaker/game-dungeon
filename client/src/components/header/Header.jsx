@@ -9,7 +9,9 @@ export default function Header() {
       </div>
       <img
         className="headerImg"
+
         src="https://acloserlisten.files.wordpress.com/2020/01/games-banner-1140x400-1.png"
+
         alt=""
       />
     </div>
