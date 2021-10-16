@@ -91,4 +91,15 @@ router.get("/", async (req, res) => {
 });
 
 
+// GET ALL BLOG POSTS FOR A SPECIFIC GAME
+router.get("/game/:id", async (req, res) => {
+    try {
+        const gPosts = await Blog.find({gameID: req.params.id});
+        res.status(200).json(gPosts)
+    } catch(err) {
+        res.status(500).json(err)
+    }
+});
+
+
 module.exports = router

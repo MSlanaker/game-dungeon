@@ -71,7 +71,7 @@ router.get("/find/:keyword", async (req, res) => {
       "Client-ID": `${API_CLIENT_ID}`,
       Authorization: `Bearer ${API_AUTH}`,
     },
-    data: `fields name, game; search "${req.params.keyword}"; limit 200;`,
+    data: `fields name, game; search "${req.params.keyword}"; where game != null; limit 200;`,
     // game is the game id
   };
 
